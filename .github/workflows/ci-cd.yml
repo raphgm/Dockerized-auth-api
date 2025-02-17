@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./Dockerfile
+          file: auth-api/dockerfile  # Path to your Dockerfile
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/my-express-app:latest
